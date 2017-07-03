@@ -15,12 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButtonOutlet: UIButton!
     @IBOutlet weak var loginTimerLabel: UILabel!
     
+    // Maximum number of login attempts
     let maxLoginCount = 5
+    
+    // Number of failed login attempts
     var currentLoginCount = 0
+    
+    // Upon reaching maxLoginCount attempts, input fields are disabled and countdown initiates
     var loginTimeoutCountdown = 10
     
+    // Global access Timer()
     var timer = Timer()
     
+    // Initiates timer, and decrements loginTimeoutCountdown by 1. If loginTimeoutCountdown is equal to '0', all input fields and login button is re-enabled.
     func counter() {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: false)
@@ -35,16 +42,19 @@ class ViewController: UIViewController {
             emailTextField.isEnabled = true
             passwordTextField.isEnabled = true
             loginButtonOutlet.isEnabled = true
+            
             loginTimerLabel.text = ""
             loginTimeoutCountdown = 10
             currentLoginCount = 0
         }
     }
     
+    // Runs the loginCheck function
     @IBAction func loginButton(_ sender: Any) {
         loginCheck()
     }
     
+    // Check number of failed login attempts, and disable input when maxLoginCount limit is reached
     func checkLoginCount() {
         if (currentLoginCount < maxLoginCount) {
             
@@ -57,6 +67,8 @@ class ViewController: UIViewController {
             counter()
         }
     }
+    
+    // Check login credentials, and show second VC if login successful
     
     func loginCheck() {
         
