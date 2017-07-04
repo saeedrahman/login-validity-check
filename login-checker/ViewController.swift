@@ -21,31 +21,29 @@ class ViewController: UIViewController {
     var currentLoginCount = 0
     
     // Upon reaching maxLoginCount attempts, input fields are disabled and countdown initiates
-    var loginTimeoutCountdown = 10
+    var loginTimeoutCounter = 20
     
     // Global access Timer()
     var timer = Timer()
     
-    // Initiates timer, and decrements loginTimeoutCountdown by 1. If loginTimeoutCountdown is equal to '0', all input fields and login button is re-enabled.
-    func counter() {
+    // Initiates timer, and decrements loginTimeoutCounter by 1. If loginTimeoutCounter is equal to '0', all input fields and login button is re-enabled.
+    func initiateCounter() {
+
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.initiateCounter), userInfo: nil, repeats: false)
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: false)
+        loginTimeoutCounter -= 1
         
-        loginTimeoutCountdown -= 1
+        loginStatusLabel.text = ("Please wait for \(loginTimeoutCounter) seconds before re-attempting login")
         
-        loginStatusLabel.text = ("Please wait for \(loginTimeoutCountdown) seconds before re-attempting login")
-        
-        if (loginTimeoutCountdown == 0) {
+        if (loginTimeoutCounter == 0) {
             timer.invalidate()
-            loginStatusLabel.text = ("Re-attempt login")
+            loginStatusLabel.text = ("You may now re-attempt to login")
             emailTextField.isEnabled = true
             passwordTextField.isEnabled = true
             loginButtonOutlet.isEnabled = true
             loginButtonOutlet.setTitle("LOGIN", for: .normal)
 
-            
-            loginStatusLabel.text = ""
-            loginTimeoutCountdown = 10
+            loginTimeoutCounter = 20
             currentLoginCount = 0
         }
     }
@@ -60,12 +58,13 @@ class ViewController: UIViewController {
         if (currentLoginCount < maxLoginCount) {
             
         } else {
+            
+            initiateCounter()
+
             emailTextField.isEnabled = false
             passwordTextField.isEnabled = false
             loginButtonOutlet.isEnabled = false
             loginButtonOutlet.setTitle("LOGIN DISABLED", for: .normal)
-            
-            counter()
         }
     }
     
