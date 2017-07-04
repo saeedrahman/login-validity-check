@@ -11,9 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginCountTextField: UILabel!
     @IBOutlet weak var loginButtonOutlet: UIButton!
-    @IBOutlet weak var loginTimerLabel: UILabel!
+    @IBOutlet weak var loginStatusLabel: UILabel!
     
     // Maximum number of login attempts
     let maxLoginCount = 5
@@ -34,16 +33,18 @@ class ViewController: UIViewController {
         
         loginTimeoutCountdown -= 1
         
-        loginTimerLabel.text = ("Please wait for \(loginTimeoutCountdown) seconds before re-attempting login")
+        loginStatusLabel.text = ("Please wait for \(loginTimeoutCountdown) seconds before re-attempting login")
         
         if (loginTimeoutCountdown == 0) {
             timer.invalidate()
-            loginCountTextField.text = ("Re-attempt login")
+            loginStatusLabel.text = ("Re-attempt login")
             emailTextField.isEnabled = true
             passwordTextField.isEnabled = true
             loginButtonOutlet.isEnabled = true
+            loginButtonOutlet.setTitle("LOGIN", for: .normal)
+
             
-            loginTimerLabel.text = ""
+            loginStatusLabel.text = ""
             loginTimeoutCountdown = 10
             currentLoginCount = 0
         }
@@ -59,10 +60,10 @@ class ViewController: UIViewController {
         if (currentLoginCount < maxLoginCount) {
             
         } else {
-            loginCountTextField.text = ("Max login attempts exhausted")
             emailTextField.isEnabled = false
             passwordTextField.isEnabled = false
             loginButtonOutlet.isEnabled = false
+            loginButtonOutlet.setTitle("LOGIN DISABLED", for: .normal)
             
             counter()
         }
@@ -77,7 +78,7 @@ class ViewController: UIViewController {
         
         if (emailTextField.text != username || passwordTextField.text != password) {
             currentLoginCount += 1
-            loginCountTextField.text = ("Invalid username or password: \(currentLoginCount) of \(maxLoginCount) attempts")
+            loginStatusLabel.text = ("Invalid username or password: \(currentLoginCount) of \(maxLoginCount) attempts")
             checkLoginCount()
         } else {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginSuccessVC")

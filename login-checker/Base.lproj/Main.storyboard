@@ -26,39 +26,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBGCard" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-0K-MZP">
-                                <rect key="frame" x="8" y="109" width="358" height="477"/>
+                                <rect key="frame" x="8" y="106" width="358" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLX-Bc-NKo">
-                                <rect key="frame" x="47" y="408" width="280" height="45"/>
+                                <rect key="frame" x="47" y="405" width="280" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Enter your CDNIS email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-hp-2ZH" userLabel="Email Field">
-                                <rect key="frame" x="47" y="345" width="280" height="45"/>
+                                <rect key="frame" x="47" y="342" width="280" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhT-pc-CMz">
-                                <rect key="frame" x="47" y="408" width="135" height="21"/>
+                                <rect key="frame" x="47" y="405" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <color key="textColor" red="0.62955391839999997" green="0.62955391839999997" blue="0.62955391839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EMAIL ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU0-VG-4sK">
-                                <rect key="frame" x="47" y="345" width="135" height="21"/>
+                                <rect key="frame" x="47" y="342" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <color key="textColor" red="0.62955391839999997" green="0.62955391839999997" blue="0.62955391839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPq-1V-PIZ">
-                                <rect key="frame" x="47" y="477" width="280" height="46"/>
+                                <rect key="frame" x="47" y="474" width="280" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90924315249999998" green="0.27095959219999999" blue="0.2256658818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
@@ -70,18 +70,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="schoolLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ok9-7n-qpM">
-                                <rect key="frame" x="132" y="199" width="110" height="110"/>
+                                <rect key="frame" x="132" y="196" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9av-1E-Aa7">
-                                <rect key="frame" x="47" y="317" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                <color key="textColor" red="0.90924315249999998" green="0.27095959219999999" blue="0.2256658818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enV-Ar-uyq">
-                                <rect key="frame" x="47" y="531" width="280" height="21"/>
+                                <rect key="frame" x="47" y="314" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                 <color key="textColor" red="0.90924315249999998" green="0.27095959219999999" blue="0.2256658818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,8 +86,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="FCK-hp-2ZH" id="AaR-EH-tqT"/>
                         <outlet property="loginButtonOutlet" destination="wPq-1V-PIZ" id="Z8o-jQ-Gi3"/>
-                        <outlet property="loginCountTextField" destination="enV-Ar-uyq" id="HEa-5f-jA6"/>
-                        <outlet property="loginTimerLabel" destination="9av-1E-Aa7" id="ORV-8n-8eI"/>
+                        <outlet property="loginStatusLabel" destination="9av-1E-Aa7" id="BPK-Ns-I0g"/>
                         <outlet property="passwordTextField" destination="kLX-Bc-NKo" id="m5C-tK-mpa"/>
                     </connections>
                 </viewController>
